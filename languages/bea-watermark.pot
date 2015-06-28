@@ -1,0 +1,29 @@
+# Copyright (C) 2010 {package-name}
+# This file is distributed under the same license as the {package-name} package.
+msgid ""
+msgstr ""
+"Project-Id-Version:  n"
+"Report-Msgid-Bugs-To: wp-polyglots@lists.automattic.comn"
+"POT-Creation-Date: 2015-06-28 19:44:57+00:00n"
+"MIME-Version: 1.0n"
+"Content-Type: text/plain; charset=UTF-8n"
+"Content-Transfer-Encoding: 8bitn"
+"PO-Revision-Date: 2010-MO-DA HO:MI+ZONEn"
+"Last-Translator: FULL NAME <human@beapi.fr>n"
+"Language-Team: French <human@beapi.fr>n"
+
+#: compat.php:23
+msgid "Plugin Boilerplate requires PHP version %s or greater to be activated."
+msgstr ""
+
+#: compat.php:38
+msgid "Bea Watermark require PHP version %s or greater to be activated. Your server is currently running PHP version %s."
+msgstr ""
+
+#: classes/admin/main.php:44
+msgid "Watermark"
+msgstr ""
+
+#: classes/admin/main.php:47
+msgid "Display a javascript watermark next to the image"
+msgstr ""
