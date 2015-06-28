@@ -1,0 +1,20 @@
+{
+  "name": "bea-watermark",
+  "version": "1.0.0",
+  "description": "Watermark on you images with javascript",
+  "author": "beapi",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/beapi/bea-watermark.git"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-cssmin": "^0.1.7",
+    "gulp-jshint": "^1.11.0",
+    "gulp-load-plugins": "^1.0.0-rc.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^1.2.0",
+    "gulp-watch": "^4.2.4",
+    "matchdep": "*"
+  }
+}

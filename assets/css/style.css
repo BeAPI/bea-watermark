@@ -1,0 +1,94 @@
+.img-watermark-holder {
+    position: relative;
+    overflow: hidden;
+}
+.img-watermark-holder .alignleft,
+.img-watermark-holder .alignright,
+.img-watermark-holder .aligncenter {
+    margin: 0;
+}
+.img-watermark-holder.img-watermark-small .img-watermark-txt {
+    width: 90px;
+}
+.img-watermark {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+.img-watermark:hover .img-watermark-txt,
+.img-watermark:focus .img-watermark-txt,
+.img-watermark:active .img-watermark-txt {
+    right: 34px;
+    visibility: visible;
+    -moz-opacity: 1;
+    -khtml-opacity: 1;
+    -webkit-opacity: 1;
+    opacity: 1;
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=100);
+    filter: alpha(opacity=100);
+    color: #ffffff;
+    background: #313336;
+}
+.img-watermark-icon {
+    display: block;
+    height: 24px;
+    width: 24px;
+    text-align: center;
+    font: italic 700 16px/24px Times, Georgia, serif;
+    color: #313336;
+    background: #ffffff;
+    -webkit-border-radius: 50% 50% 50% 50%;
+    -moz-border-radius: 50% 50% 50% 50%;
+    border-radius: 50% 50% 50% 50%;
+    -moz-background-clip: padding-box;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+}
+.img-watermark-icon:hover,
+.img-watermark-icon:focus,
+.img-watermark-icon:active {
+    color: #ffffff;
+    background: #313336;
+}
+.img-watermark-icon:hover .img-watermark-txt,
+.img-watermark-icon:focus .img-watermark-txt,
+.img-watermark-icon:active .img-watermark-txt {
+    right: 34px;
+    visibility: visible;
+    -moz-opacity: 1;
+    -khtml-opacity: 1;
+    -webkit-opacity: 1;
+    opacity: 1;
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=100);
+    filter: alpha(opacity=100);
+}
+.img-watermark-txt {
+    position: absolute;
+    right: 24px;
+    bottom: 0;
+    width: 200px;
+    padding: 5px 10px 4px;
+    font-size: 0.750em;
+    line-height: 1.2em;
+    color: #313336;
+    background: #313336;
+    -moz-background-clip: padding-box;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    -moz-opacity: 0;
+    -khtml-opacity: 0;
+    -webkit-opacity: 0;
+    opacity: 0;
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0);
+    filter: alpha(opacity=0);
+    visibility: hidden;
+}
+.img-watermark-txt:after {
+    content: '';
+    position: absolute;
+    right: -10px;
+    bottom: 12px;
+    height: 1px;
+    width: 10px;
+    background: #313336;
+}
