@@ -8,6 +8,8 @@
         return;
     }
 
+    watermark_template = _.template(watermark_template);
+
     jQuery("img[data-watermark]").each(function () {
         var el = jQuery(this),
             classes = [],
@@ -32,7 +34,7 @@
             classes.push(' img-watermark-small');
         }
 
-        el.after(_.template(watermark_template, {
+        el.after(watermark_template({
             watermark: el.data('watermark')
         })).prependTo(el.next('.img-watermark-holder').addClass(classes.join(' ')));
 
