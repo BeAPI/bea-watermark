@@ -1,7 +1,7 @@
 <?php
 /*
  Plugin Name: BEA Watermark
- Version: 1.0.0
+ Version: 1.0.1
  Description: Add watermark to the images if needed
  Author: BeApi
  Author URI: http://www.beapi.fr
@@ -33,7 +33,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 
 // Plugin constants
-define( 'BEA_WM_VERSION', '1.0.0' );
+define( 'BEA_WM_VERSION', '1.0.1' );
 define( 'BEA_WM_MIN_PHP_VERSION', '5.4' );
 define( 'BEA_WM_VIEWS_FOLDER_NAME', 'bea-watermark' );
 
