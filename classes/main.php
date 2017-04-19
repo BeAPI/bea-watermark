@@ -1,18 +1,11 @@
 <?php
 namespace BEA\WM;
 
-use BEA\WM\API as API;
 
 /**
  * Class Client
  */
 class Main {
-
-	/**
-	 * The meta name for the watermark
-	 */
-	const watermark_meta_name = "bea_watermark";
-
 	/**
 	 *
 	 */
@@ -56,7 +49,7 @@ class Main {
 			return $attributes;
 		}
 
-		$attributes['data-watermark'] = $att->{self::watermark_meta_name};
+		$attributes['data-watermark'] = $att->{BEA_WM_META_NAME};
 
 		return $attributes;
 	}
@@ -70,7 +63,7 @@ class Main {
 	 * @return bool
 	 */
 	public static function is_image_eligible( $id ) {
-		$bea_rewrite = get_post_meta( $id, self::watermark_meta_name, true );
+		$bea_rewrite = get_post_meta( $id, BEA_WM_META_NAME, true );
 
 		return ! empty( $bea_rewrite );
 	}
@@ -195,7 +188,7 @@ class Main {
 			//New content with watermark add
 			$content = str_replace(
 				'src="' . $src[1] . '"',
-				'src="' . $src[1] . '" ' . sprintf( 'data-watermark="%s"', esc_html( get_post_meta( $id_attrs[1], self::watermark_meta_name, true ) ) ),
+				'src="' . $src[1] . '" ' . sprintf( 'data-watermark="%s"', esc_html( get_post_meta( $id_attrs[1], BEA_WM_META_NAME, true ) ) ),
 				$content );
 		}
 
