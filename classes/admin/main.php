@@ -42,7 +42,7 @@ class Main {
 			'show_in_edit'  => true,
 			'show_in_modal' => true,
 			'label'         => __( 'Watermark', 'bea-watermark' ),
-			'value'         => $attachment->{Client::watermark_meta_name},
+			'value'         => $attachment->{BEA_WM_META_NAME},
 			'input'         => 'textarea',
 			'helps'         => __( 'Display a javascript watermark next to the image', 'bea-watermark' ),
 		);
@@ -69,9 +69,9 @@ class Main {
 
 		// Remove if not used
 		if ( isset( $data['bea-watermark'] ) ) {
-			update_post_meta( $attachment['ID'], Client::watermark_meta_name, sanitize_text_field( $data['bea-watermark'] ) );
+			update_post_meta( $attachment['ID'], BEA_WM_META_NAME, sanitize_text_field( $data['bea-watermark'] ) );
 		} else {
-			delete_post_meta( $attachment['ID'], Client::watermark_meta_name );
+			delete_post_meta( $attachment['ID'], BEA_WM_META_NAME );
 		}
 
 		// return the modified images
@@ -93,7 +93,7 @@ class Main {
 			return $html;
 		}
 
-		$watermark = get_post_meta( $id, Client::watermark_meta_name, true );
+		$watermark = get_post_meta( $id, BEA_WM_META_NAME, true );
 		if ( empty( $watermark ) ) {
 			return $html;
 		}
@@ -112,7 +112,7 @@ class Main {
 	 */
 	public static function is_image_eligible( $id, $size ) {
 		list( $img_src, $width, $height ) = image_downsize( $id, $size );
-		$bea_watermark = get_post_meta( $id, Client::watermark_meta_name, true );
+		$bea_watermark = get_post_meta( $id, BEA_WM_META_NAME, true );
 
 		if ( ( $width < apply_filters( 'bea-watermark-min-width', 150 ) || empty( $bea_watermark ) ) && false === apply_filters( 'bea_watermark_skip', false, $id, $img_src, $width, $height ) ) {
 			return false;
