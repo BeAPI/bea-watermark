@@ -1,0 +1,19 @@
+{
+  "name": "bea/bea-watermark",
+  "description": "Add watermark to the images if needed",
+  "keywords":[
+    "wordpress",
+    "wordpress-plugin"
+  ],
+  "homepage":"https://github.com/BeAPI/bea-watermark",
+  "authors": [
+    {
+      "name":"Be API",
+      "email":"technique@beapi.fr",
+      "homepage":"https://beapi.fr/"
+    }
+  ],
+  "type":"wordpress-plugin",
+  "minimum-stability":"stable",
+  "license":"GPL-3.0+"
+}
